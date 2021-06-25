@@ -1,0 +1,27 @@
+<h1>All Books</h1>
+
+{% for book in object_list  %}
+    <ul>
+        <li>Title: {{ book.title }}</li>
+        <li>Subtitle: {{ book.subtitle }}</li>
+        <li>Author: {{ book.author }}</li>
+        <li>ISBN: {{ book.isbn }}</li>
+    </ul>
+{% endfor %}
+
+
+<!--
+Django viene con un lenguaje de plantilla que permite la lógica básica. 
+Aquí usamos la etiqueta for para recorrer todos los libros disponibles. 
+Las etiquetas de plantilla deben incluirse entre corchetes de apertura / cierre y paréntesis. 
+Entonces, el formato es siempre '% for ...%' y luego debemos cerrar nuestro ciclo más tarde con % endfor%.
+
+Lo que estamos recorriendo es el objeto que contiene todos los libros disponibles en nuestro modelo, 
+cortesía de ListView. El nombre de este objeto es lista_objetos.
+
+Por lo tanto, para recorrer cada libro escribimos '% for book in object_list%'.
+
+Y luego muestre cada campo de nuestro modelo. -->
+
+
+
